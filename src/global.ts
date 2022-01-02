@@ -7,4 +7,5 @@ export const DEFAULT_OPTIONS: IPreprocessorOption = {
     directives: {},
     params: {},
     verbose: false,
+    cacheable: false,
 };
