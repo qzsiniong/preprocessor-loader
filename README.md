@@ -23,6 +23,7 @@ Bring the awesome "Conditional Compilation" to the Webpack, and more.
   - [`directives`](#directives)
   - [`params`](#params)
   - [`verbose`](#verbose)
+  - [`cacheable`](#cacheable)
 - [Build-in Directives](#build-in-directives)
   - [`#!if` / `#!else` / `#!elseif` / `#!endif`](#if--else--elseif--endif)
   - [`#!debug`](#debug)
@@ -318,6 +319,15 @@ If set to `true`, yields:
 console.log('much wow');
 // #!endif
 ```
+
+### `cacheable`
+
+> type: `boolean`
+>
+> default: `false`
+
+Whether support cacheable for webpack
+
 
 ## Build-in Directives
 
