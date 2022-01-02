@@ -6,6 +6,7 @@ import { IPreprocessorOption } from './type';
 
 export interface IWebpackLoaderContext {
     query: IPreprocessorOption;
+    cacheable?: (cacheable?: boolean) => void;
 }
 
 /**
@@ -17,7 +18,8 @@ export interface IWebpackLoaderContext {
  * @returns {string}
  */
 export function preprocessor(this: IWebpackLoaderContext, content: string): string {
-    const { directives, params, verbose } = getOptions(this.query);
+    const { directives, params, verbose, cacheable } = getOptions(this.query);
+    this.cacheable && this.cacheable(Boolean(cacheable));
 
     const r = reader(content);
     const f = filter(directives, params);

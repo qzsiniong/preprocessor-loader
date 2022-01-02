@@ -25,6 +25,10 @@ export interface IPreprocessorOption {
      * whether keep all lines (deleted code as comment)
      */
     verbose: boolean;
+    /**
+     * cacheable
+     */
+    cacheable: boolean;
 }
 
 export interface ExtendedIterableIterator<T, TReturn, TNext>
